@@ -12,6 +12,34 @@
     <h2 class="header__description">Simplify your daily report with a common base unit.</h2>
   </header>
   <main>
+    <section id="calculator">
+      <form>
+        <div class="form__input-group">
+          <div class="form-input__container">
+            <label for="days" class="form-input__label">Days</label>
+            <input type="number" name="days" id="input-days" class="form-input__input">
+          </div>
+          <div class="form-input__container">
+            <label for="hours" class="form-input__label">Hours</label>
+            <input type="number" name="hours" id="input-hours" class="form-input__input">
+          </div>
+          <div class="form-input__container">
+            <label for="minutes" class="form-input__label">Minutes</label>
+            <input type="number" name="minutes" id="input-minutes" class="form-input__input">
+          </div>
+        </div>
+
+        <div class="form__actions-group">
+          <button class="form-actions-group__button--green" type="submit">Calculate</button>
+          <button class="form-actions-group__button--blue" type="reset">Reset</button>
+        </div>
+      </form>
+
+      <div class="calculator-result__container">
+        <h2 id="calculator-result">result</h2>
+        <button type="button" class="calculator-result__button">Copiar</button>
+      </div>
+    </section>
   </main>
   <footer></footer>
 </body>
