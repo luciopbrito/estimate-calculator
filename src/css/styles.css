@@ -140,6 +140,40 @@ form {
   font-size: 4rem;
 }
 
+footer {
+  width: 100%;
+  background-color: var(--color-light-blue);
+  display: grid;
+  padding: var(--paddingBetweenSection);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: 
+    'contact socialMedia'
+    'copyright copyright'
+  ;
+  gap: 2rem;
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: contact;
+}
+
+.footer__social-media {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  grid-area: socialMedia;
+}
+
+.footer__copyright {
+  grid-area: copyright;
+  text-align: center;
+}
+
+
 @media (max-width: 2560px) {
   html {
     font-size: 62.5%;
@@ -158,5 +192,15 @@ form {
   .form__input-group,
   .form__actions-group {
     flex-direction: column;
+  }
+
+  footer {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(1fr, 3);
+    grid-template-areas: 
+      'contact'
+      'socialMedia'
+      'copyright'
+    ;
   }
 }
