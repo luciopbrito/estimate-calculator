@@ -6,6 +6,7 @@
   padding: 0;
   margin: 0;
   border: 0;
+  font-size: 1.6rem;
 }
 
 :root {
@@ -154,10 +155,6 @@ form {
 }
 
 @media (max-width: 768px) {
-  html {
-    font-size: 40%;
-  }
-
   .form__input-group,
   .form__actions-group {
     flex-direction: column;
