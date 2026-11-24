@@ -22,6 +22,11 @@ const minutes = document.getElementById('input-minutes');
  */
 const calculatorResult = document.getElementById('calculator-result');
 
+/**
+ * @type {HTMLButtonElement}
+ */
+const pasteButton = document.querySelector('.calculator-result__paste-button');
+
 const form = document.querySelector('form');
 
 form.onsubmit = (event) => {
@@ -41,4 +46,15 @@ form.onreset = (event) => {
   days.value = 0;
   hours.value = 0;
   minutes.value = 0;
+}
+
+pasteButton.onclick = () => {
+  if (calculatorResult.innerText !== "") {
+    navigator.clipboard.writeText(calculatorResult.innerText)
+      .then(() => {
+        alert("The result has been copied!")
+      });
+  } else {
+    alert("There is no result yet.");
+  }
 }
